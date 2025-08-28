@@ -72,7 +72,8 @@ class SWHSysField(SystemField):
         """Called after the record is dumped in secondary storage."""
         obj = self.obj(record)
         val = obj.dump()
-        data[self.key] = val
+        if val:
+            data[self.key] = val
 
     def post_load(self, record, data, loader=None):
         """Execute after a record was loaded."""
