@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version v0.13.3 (released 2025-08-29)
+
+- fix(systemfields): avoid indexing empty `swh` field
+
 Version v0.13.2 (released 2025-08-28)
 
 - fix(systemfields): avoid DB queries when no indexed data
