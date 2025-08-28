@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2020-2024 CERN.
+# Copyright (C) 2020-2025 CERN.
 # Copyright (C) 2020 Cottage Labs LLP.
 #
 # Invenio-SWH is free software; you can redistribute it and/or modify it
@@ -9,6 +9,6 @@
 
 from .ext import InvenioSWH
 
-__version__ = "0.13.1"
+__version__ = "0.13.2"
 
 __all__ = ("__version__", "InvenioSWH")

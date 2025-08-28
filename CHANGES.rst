@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version v0.13.2 (released 2025-08-28)
+
+- fix(systemfields): avoid DB queries when no indexed data
+
 Version v0.13.1 (released 2025-02-13)
 
 - Bump invenio-rdm-records to stable release.
