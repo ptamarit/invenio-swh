@@ -39,6 +39,17 @@ class SWHDeposit:
             deposit = cls.model_cls(object_uuid=object_uuid)
             return cls(deposit)
 
+    @classmethod
+    def load(cls, data):
+        """Load from raw data."""
+        model = cls.model_cls(
+            object_uuid=data.get("object_uuid"),
+            swhid=data.get("swhid"),
+            swh_deposit_id=data.get("swh_deposit_id"),
+            status=data.get("status"),
+        )
+        return cls(model=model)
+
     @cached_property
     def origin(self):
         """Return the origin of the deposit."""
