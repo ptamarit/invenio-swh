@@ -81,6 +81,6 @@ class SWHSysField(SystemField):
         swh_data = data.pop(self.key, None)
         swh = None
         if swh_data:
-            deposit = SWHDeposit.load(data)
+            deposit = SWHDeposit.load(swh_data)
             swh = SWHObj(record, deposit=deposit)
         self._set_cache(record, swh)
