@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version v0.13.4 (released 2025-08-29)
+
+- fix(systemfields): use correct variable for loading SWHDeposit
+
 Version v0.13.3 (released 2025-08-29)
 
 - fix(systemfields): avoid indexing empty `swh` field
