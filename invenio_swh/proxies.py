@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: 2023 CERN.
 # SPDX-License-Identifier: MIT
 """Proxy objects of invenio-swh."""
+
 from flask import current_app
 from werkzeug.local import LocalProxy
 

@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: 2023-2024 CERN.
 # SPDX-License-Identifier: MIT
 """Celery tasks for Invenio / Software Heritage integration."""
+
 from datetime import datetime, timedelta
 
 from celery.app import shared_task

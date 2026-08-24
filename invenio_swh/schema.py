@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: 2023-2024 CERN.
 # SPDX-License-Identifier: MIT
 """Invenio-SWH service schema."""
+
 from flask import current_app
 from invenio_rdm_records.contrib.codemeta.processors import CodemetaDumper
 from invenio_rdm_records.resources.serializers.codemeta import CodemetaSchema

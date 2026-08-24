@@ -4,7 +4,6 @@
 
 """Support for onward deposit of software artifacts to Software Heritage."""
 
-
 SWH_ENABLED = False
 """Enable/disable the extension."""
 

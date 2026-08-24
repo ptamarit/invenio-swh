@@ -29,11 +29,14 @@ class DepositFailed(InvenioSWHException):
 class DepositNotCreated(InvenioSWHException):
     """Raised when the deposit failed to be created."""
 
+
 class DepositNotFound(InvenioSWHException):
     """Raised when the deposit is not found."""
 
+
 class DepositPollFailed(InvenioSWHException):
     """Raised when the deposit polling failed."""
+
 
 ####
 # Controller exceptions
