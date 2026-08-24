@@ -39,7 +39,9 @@ dependencies = [
   "invenio-rdm-records>=28.0.0",
   "invenio-records-resources>=9.0.0",
   "marshmallow-utils>=0.14.1",
-  "sword2>=0.3.0",
+  # TODO: PyPI rejects direct references, so we can't release with this here.
+  # Needs the fork published to PyPI under a name we own.
+  "sword2 @ git+https://github.com/inveniosoftware/python-client-sword2@0.3.1",
   "xmltodict",
 ]
 dynamic = ["version"]
@@ -87,6 +89,10 @@ tests = [
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+# The sword2 dependency is a git reference to our fork.
+[tool.hatch.metadata]
+allow-direct-references = true
 
 [tool.hatch.version]
 path = "invenio_swh/__init__.py"
