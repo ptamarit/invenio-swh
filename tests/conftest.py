@@ -65,6 +65,13 @@ def app_config(app_config):
     }
     app_config["FILES_REST_DEFAULT_STORAGE_CLASS"] = "L"
 
+    # Deposits carry the parent DOI, so DOI minting has to be on.
+    app_config["DATACITE_ENABLED"] = True
+    app_config["DATACITE_USERNAME"] = "INVALID"
+    app_config["DATACITE_PASSWORD"] = "INVALID"
+    app_config["DATACITE_PREFIX"] = "10.1234"
+    app_config["DATACITE_DATACENTER_SYMBOL"] = "TEST"
+
     return app_config
 
 
@@ -119,6 +126,8 @@ def minimal_record(running_app):
                 }
             ],
             "title": "A Romans story",
+            # Required for DOI registration.
+            "publisher": "Acme Inc",
         },
     }
 
@@ -254,9 +263,12 @@ def mock_client():
         elif args[1] == "GET" and "/status" in args[0]:
             response.status = 200
             content = {
-                "deposit_status": "loading",
+                "deposit_status": "done",
                 "deposit_id": 1,
-                "deposit_swh_id": "swh:1:dir:1",
+                "deposit_swh_id_context": (
+                    "swh:1:dir:1;origin=https://example.org/record/1;"
+                    "visit=swh:1:snp:2;anchor=swh:1:rev:3;path=/"
+                ),
             }
             return response, content
         else:
