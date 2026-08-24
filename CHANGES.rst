@@ -6,6 +6,14 @@
 Changes
 =======
 
+Version v0.13.5 (released 2026-08-24)
+
+- Bump Invenio dependencies to the current stable releases.
+- Depend on the ``inveniosoftware`` fork of ``sword2``, which unpins ``lxml``
+  and works on Python 3.12 through 3.14.
+- Build with hatchling instead of setuptools.
+- Run tests and releases through the shared Invenio workflows.
+
 Version v0.13.4 (released 2025-08-29)
 
 - fix(systemfields): use correct variable for loading SWHDeposit
